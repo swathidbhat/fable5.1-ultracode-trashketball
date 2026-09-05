@@ -1,0 +1,12 @@
+{
+  "name": "trashketball",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Trashketball: a two-level 3D paper-toss game (Severance office, beach house) built with Three.js",
+  "scripts": {
+    "start": "python3 tools/serve.py 5173",
+    "test": "node tests/physics.test.mjs",
+    "check": "for f in src/*.js src/levels/*.js src/levels/*/*.js; do [ -f \"$f\" ] && node --check \"$f\" || true; done"
+  }
+}
