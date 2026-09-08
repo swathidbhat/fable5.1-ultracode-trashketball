@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1e33">
+  <title>Trashketball</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&display=swap">
+  <style>
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+      background: #0a1e33;
+      font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    #game {
+      position: fixed; inset: 0;
+      width: 100%; height: 100%;
+      display: block;
+      touch-action: none;
+      user-select: none; -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+      cursor: crosshair;
+    }
+    #hud {
+      position: fixed; inset: 0;
+      pointer-events: none;
+      user-select: none; -webkit-user-select: none;
+    }
+    #hud [hidden] { display: none !important; }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="hud"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
